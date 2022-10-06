@@ -3,14 +3,18 @@ const squares = document.querySelectorAll('.square')
 const mole = document.querySelector('.mole')
 const timeLeft = document.getElementById('timeLeft')
 const score = document.getElementById('score')
+const modal = document.querySelector('.modal')
+const modalMsg = document.querySelector('.modal-body-text')
+const closeModalBtn = document.querySelector('button[data-bs-dismiss="modal"]')
+
 let hitConfirmed = 0
 let moleLocation
 let currentTime = 60
 let timerId = null
 
 // Game Functions
-// moveMole()
-// let countDownTimerId = setInterval(countDown, 1000)
+moveMole()
+let countDownTimerId = setInterval(countDown, 1000)
 
 // Event for when mole is hit
 squares.forEach((square) => {
@@ -22,6 +26,9 @@ squares.forEach((square) => {
     }
   })
 })
+
+// Event to close the modal
+closeModalBtn.addEventListener('click', closeModal)
 
 // ************
 // FUNCTIONS **
@@ -48,7 +55,18 @@ function countDown() {
   if (currentTime === 0) {
     clearInterval(countDownTimerId)
     clearInterval(timerId)
-    // TODO replace alert with modal
-    alert('GAME OVER! Your final score is ' + hitConfirmed)
+
+    showModal()
   }
+}
+
+function showModal() {
+  modal.style.display = 'block'
+
+  modalMsg.textContent = `Your final score is ${hitConfirmed}`
+  document.querySelector('input').focus()
+}
+
+function closeModal() {
+  modal.style.display = 'none'
 }
