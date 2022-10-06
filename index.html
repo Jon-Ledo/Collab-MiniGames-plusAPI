@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <p>Hello World</p>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini game</title>
+  <link rel="stylesheet" href="./Assets/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to the mini game.</h1>
+  </header>
+  <div class="musicPlayer" id="player"
+    style="width:800px; background:linear-gradient(90deg,rgb(6, 143, 17),rgb(2, 51, 8)); display:inline-flex; justify-content: center;border-radius: 10px;">
+    <p style="background-color: rgb(2, 107, 2);">Play music here <br>
+      <em>
+        Spotify API
+    </p>
+    </em>
+  </div>
+  <div>
+    <a href="game.html">
+      <div class="gameContainer" id="game1">Game 1</div>
+    </a>
+    <div class="gameContainer" id="game2">Game 2</div>
+    <div class="gameContainer" id="game3">Game 3</div>
+    <div class="gameContainer" id="game4">Game 4</div>
+  </div>
+  <div class="selectedGame" id="selectedGame"
+    style="width: 600px; height: 600px; background-color: yellow; border-radius:20px; color: black;">
+    GamePlayer here(hidden by default)
+  </div>
+</body>
+
 </html>
