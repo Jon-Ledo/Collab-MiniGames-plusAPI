@@ -11,7 +11,6 @@ let hitConfirmed = 0
 let moleLocation
 let currentTime = 60
 let timerId = null
-
 // Game Functions
 moveMole()
 let countDownTimerId = setInterval(countDown, 1000)
@@ -55,8 +54,12 @@ function countDown() {
   if (currentTime === 0) {
     clearInterval(countDownTimerId)
     clearInterval(timerId)
-
+    
     showModal()
+    
+    localStorage.setItem("highScore", hitConfirmed)
+    return window.location.assign("./End screen/Endgame.html")
+    
   }
 }
 
