@@ -54,12 +54,11 @@ function countDown() {
   if (currentTime === 0) {
     clearInterval(countDownTimerId)
     clearInterval(timerId)
-    
+
     showModal()
-    
-    localStorage.setItem("highScore", hitConfirmed)
-    return window.location.assign("./End screen/Endgame.html")
-    
+
+    localStorage.setItem('highScore', hitConfirmed)
+    return window.location.assign('./End screen/Endgame.html')
   }
 }
 
