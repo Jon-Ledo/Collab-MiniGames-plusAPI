@@ -7,10 +7,9 @@ let hitConfirmed = 0
 let moleLocation
 let currentTime = 60
 let timerId = null
-
 // Game Functions
-// moveMole()
-// let countDownTimerId = setInterval(countDown, 1000)
+moveMole()
+let countDownTimerId = setInterval(countDown, 1000)
 
 // Event for when mole is hit
 squares.forEach((square) => {
@@ -50,5 +49,8 @@ function countDown() {
     clearInterval(timerId)
     // TODO replace alert with modal
     alert('GAME OVER! Your final score is ' + hitConfirmed)
+    localStorage.setItem("highScore", hitConfirmed)
+    return window.location.assign("./End screen/Endgame.html")
   }
 }
+
