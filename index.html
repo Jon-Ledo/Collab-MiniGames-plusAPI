@@ -1,38 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini game</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mini game</title>
-  <link rel="stylesheet" href="./Assets/style.css">
-</head>
+  <body>
+    <div class="container text-center">
+      <section class="row">
+        <!-- HEADER -->
+        <header class="col-12">
+          <h1 class="fs-1">JavaScript Mini Games</h1>
 
-<body>
-  <header>
-    <h1>Welcome to the mini game.</h1>
-  </header>
-  <div class="musicPlayer" id="player"
-    style="width:800px; background:linear-gradient(90deg,rgb(6, 143, 17),rgb(2, 51, 8)); display:inline-flex; justify-content: center;border-radius: 10px;">
-    <p style="background-color: rgb(2, 107, 2);">Play music here <br>
-      <em>
-        Spotify API
-    </p>
-    </em>
-  </div>
-  <div>
-    <a href="game.html">
-      <div class="gameContainer" id="game1">Game 1</div>
-    </a>
-    <div class="gameContainer" id="game2">Game 2</div>
-    <div class="gameContainer" id="game3">Game 3</div>
-    <div class="gameContainer" id="game4">Game 4</div>
-  </div>
-  <div class="selectedGame" id="selectedGame"
-    style="width: 600px; height: 600px; background-color: yellow; border-radius:20px; color: black;">
-    GamePlayer here(hidden by default)
-  </div>
-</body>
+          <div class="music-player" id="player">
+            <p class="fs-3">Play music here from Spotify</p>
+            <!-- CODE FOR SPOTIFY -->
+          </div>
+        </header>
+      </section>
 
+      <!-- GAMES SECTION -->
+      <section class="row justify-content-space">
+        <!-- GAME 1 -->
+        <article class="col-md-6">
+          <div class="card">
+            <a href="./RPS-GAME.html">
+              <div class="card-body">
+                <h2 class="card-title">Rock-Paper-Scissors</h2>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+              </div>
+            </a>
+          </div>
+        </article>
+
+        <!-- GAME 2 -->
+        <div class="col-md-6">
+          <article class="card">
+            <a href="./games/whac-a-mole.html">
+              <div class="card-body">
+                <h2 class="card-title">Whack-A-Mole</h2>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <!-- GAME 3 -->
+        <div class="col-md-6">
+          <article class="card">
+            <a href="./minesweeper.html">
+              <div class="card-body">
+                <h2 class="card-title">Minesweeper</h2>
+                <p class="card-text">
+                  With supporting text below as a natural lead-in to additional
+                  content.
+                </p>
+              </div>
+            </a>
+          </article>
+        </div>
+
+        <!-- GAME 4 -->
+        <div class="col-md-6">
+          <article class="card">
+            <a href="#">
+              <div class="card-body">
+                <h2 class="card-title">Coming Soon...</h2>
+                <p class="card-text"></p>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <!-- leaderboards -->
+      <div class="learderboard">
+        <button id="game1">Leaderboards</button>
+      </div>
+      <!-- <div
+        class="selectedGame"
+        id="selectedGame"
+        style="
+          width: 600px;
+          height: 600px;
+          background-color: yellow;
+          border-radius: 20px;
+          color: black;
+        "
+      >
+        GamePlayer here(hidden by default)
+      </div> -->
+    </div>
+    <script src="./Assets/script.js"></script>
+  </body>
 </html>
