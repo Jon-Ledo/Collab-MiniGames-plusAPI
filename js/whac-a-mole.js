@@ -9,8 +9,8 @@ let currentTime = 60
 let timerId = null
 
 // Game Functions
-// moveMole()
-// let countDownTimerId = setInterval(countDown, 1000)
+moveMole()
+let countDownTimerId = setInterval(countDown, 1000)
 
 // Event for when mole is hit
 squares.forEach((square) => {
@@ -52,3 +52,4 @@ function countDown() {
     alert('GAME OVER! Your final score is ' + hitConfirmed)
   }
 }
+
