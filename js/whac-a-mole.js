@@ -63,13 +63,11 @@ function countDown() {
     localStorage.setItem('highScore', hitConfirmed)
 
     setTimeout(() => {
-      return window.location.assign('./End screen/Endgame.html')
+      return window.location.assign('../End screen/Endgame.html')
     }, 2000)
   }
 }
 
-<<<<<<< HEAD
-=======
 function showModal() {
   modal.style.display = 'block'
 
@@ -79,4 +77,3 @@ function showModal() {
 function closeModal() {
   modal.style.display = 'none'
 }
->>>>>>> feb72fea6f8993b902aba37b15575fa281b20c78
