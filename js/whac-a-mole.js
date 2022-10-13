@@ -68,6 +68,8 @@ function countDown() {
   }
 }
 
+<<<<<<< HEAD
+=======
 function showModal() {
   modal.style.display = 'block'
 
@@ -77,3 +79,4 @@ function showModal() {
 function closeModal() {
   modal.style.display = 'none'
 }
+>>>>>>> feb72fea6f8993b902aba37b15575fa281b20c78

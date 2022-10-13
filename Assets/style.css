@@ -37,12 +37,24 @@ header {
     background-color: darkviolet;
 }
 
-#selectedGame {
-    display: inline-flex;
-    justify-content: center;
 
-}
 
 a {
     text-decoration: none;
+}
+
+.selectedGame {
+    justify-content: center;
+}
+
+.box {
+    margin: 0;
+    padding: 0;
+    width: 98px;
+    height: 98px;
+    display: inline-table;
+    border: solid black 1px;
+    text-align: center;
+    font-size: 90px;
+
 }
