@@ -1,0 +1,29 @@
+*{
+    background-color: #52ADF3;
+}
+.banner{
+    text-align: center;
+    font-size: 45px;
+    margin: 15px;
+}
+.Tabs{
+    display:flex;
+    align-items: center;
+}
+.Tabs ul{
+    display: inline-flex;
+    list-style-type: none;
+    font-size: 25px;
+    align-items: center;
+}
+.Tabs li{
+    margin: 5px;
+    padding: 15px;
+    border: 4px solid red;
+    border-radius: 1px .5px;
+    background-color: aliceblue;
+}
+.Tabs li:hover{
+    font-size: larger;
+    background-color: aqua;
+}

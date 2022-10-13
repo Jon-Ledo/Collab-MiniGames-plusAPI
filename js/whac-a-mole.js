@@ -63,7 +63,7 @@ function countDown() {
     localStorage.setItem('highScore', hitConfirmed)
 
     setTimeout(() => {
-      return window.location.assign('./End screen/Endgame.html')
+      return window.location.assign('../End screen/Endgame.html')
     }, 2000)
   }
 }

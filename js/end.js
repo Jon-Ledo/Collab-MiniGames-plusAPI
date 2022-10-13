@@ -26,4 +26,5 @@ function saveScore(event){
     leaderboards.splice(30);
     
     localStorage.setItem('leaderboards', JSON.stringify(leaderboards)) 
+    return window.location.assign('../index.html')
 }
