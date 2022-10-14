@@ -45,16 +45,21 @@ a {
 
 .selectedGame {
     justify-content: center;
+
 }
 
 .box {
-    margin: 0;
-    padding: 0;
-    width: 98px;
-    height: 98px;
-    display: inline-table;
-    border: solid black 1px;
+    box-shadow: 5px 10px #888888;
+    margin: 1;
+    padding: 2;
+    width: 91px;
+    height: 91px;
+    background-color: whitesmoke;
+    display: inline-flex;
+    justify-content: center;
+    border: solid black 2px;
     text-align: center;
-    font-size: 90px;
+    color: black;
+    font-size: 20px;
 
 }
