@@ -46,14 +46,15 @@ function minesweeper() {
                 boxes[box].onclick = function reveal(e) {
 
                     if (this.dataset.number == -1) {
+                        document.getElementById('selectedGame').remove()
                         // this.textContent = '💣'
 
-                        var removeBox = document.getElementById('selectedGame').getElementsByClassName('box')
+                        // var removeBox = document.getElementById('selectedGame').getElementsByClassName('box')
 
-                        for (var i = 0; i < removeBox.length; i++) {
+                        // for (var i = 0; i < removeBox.length; i++) {
 
-                            removeBox[i].parentNode.removeChild(removeBox[i])
-                        }
+                        //     removeBox[i].parentNode.removeChild(removeBox[i])
+                        // }
                         clearInterval(timeout)
                         score = 60 - time
                         timer.innerText = 'GameOver \n' + 'Score :' + score
