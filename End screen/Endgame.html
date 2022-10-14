@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/style.css">
     <title>Game end</title>
-    <link rel="stylesheet">
+    
 </head>
 <body>
-    <div class = "container">
-        <div id = "end" class ="flex-center flex-column"></div>
+    <div class = "endContainer">
         <h1 id="finalScore"> 0 </h1>
     </div>
-    <form>
+    <form class = "scoreSubmission">
         <input 
         type="text"
         name="username"
         id ="username"
         placeholder="username"
         />
-        <button type="submit" 
+        <button class ="btn" type="submit" 
         id = "saveScoreBtn"
         onclick= "saveScore(event)" 
         disabled>
@@ -27,7 +27,8 @@
         </button>
     </form>
     <a class = "btn" href="../index.html">Home</a>
-    <a class = "btn" href="../whac-a-mole.html">Play again</a>
+    <!-- should be a script button to indicate the last game played....-->
+    <!-- <a class = "btn" href="../whac-a-mole.html">Play again</a> -->
     <!-- other games 
     <a class = "btn" href="../examplegame.html"> Game title </a>  -->
     <script src="../js/end.js"></script>
