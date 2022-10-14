@@ -1,13 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mini game</title>
-  <link rel="stylesheet" href="./Assets/style.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini game</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
 
 <body>
   <header>
@@ -32,8 +38,24 @@
   <div id="timer" style="height:50px ;width:100px; background-color:white;color:black"></div>
   <div class="selectedGame" id="selectedGame" style="border:0;width: 1000px; height: 1000px;">
 
-  </div>
-  <script src="./Assets/script.js"></script>
-</body>
-
+      <!-- leaderboards -->
+      <div class="learderboard">
+        <button id="game1">Leaderboards</button>
+      </div>
+      <!-- <div
+        class="selectedGame"
+        id="selectedGame"
+        style="
+          width: 600px;
+          height: 600px;
+          background-color: yellow;
+          border-radius: 20px;
+          color: black;
+        "
+      >
+        GamePlayer here(hidden by default)
+      </div> -->
+    </div>
+    <script src="./Assets/script.js"></script>
+  </body>
 </html>
