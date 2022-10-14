@@ -2,9 +2,8 @@ var username = document.getElementById("username");
 var saveScoreBtn = document.getElementById("saveScoreBtn");
 var finalScore = document.getElementById("finalScore")
 var highScore = localStorage.getItem("highScore");
-
 var leaderboards = JSON.parse(localStorage.getItem('leaderboards')) || [];
-
+var repeatBtn = document.getElementById('repeatBtn')
 finalScore.innerText = highScore;
 
 username.addEventListener('keyup', () => {
@@ -27,4 +26,8 @@ function saveScore(event){
     
     localStorage.setItem('leaderboards', JSON.stringify(leaderboards)) 
     return window.location.assign('../index.html')
+}
+
+function playAgain(){
+    window.history.back();
 }
