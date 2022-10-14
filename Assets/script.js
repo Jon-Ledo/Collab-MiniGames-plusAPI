@@ -19,26 +19,58 @@ function minesweeper() {
                 for (column = 0; column <= 9; column++) {
                     createDiv = document.createElement('div')
                     createDiv.setAttribute('class', 'box')
-                    createDiv.setAttribute('value', response.board[row][column])
+                    createDiv.setAttribute('data-number', response.board[row][column])
+                    createDiv.innerText = ' '
                     game.appendChild(createDiv)
                 }
             }
 
         })
         .then(response => {
+            var score = 0
+            var time = 60
+            var timer = document.getElementById('timer')
+            var timeout = setInterval(function countdown() {
+                timer.innerText = 'Time: ' + time;
+
+                time--
+                if (time <= 0) {
+                    timer.textContent = 'Time over ';
+                    clearInterval(timeout)
+                }
+            }, 1000)
+
             const boxes = document.querySelectorAll('.box')
-            console.log(boxes)
+
             for (var box = 0; box < boxes.length; box++) {
-                boxes[box].addEventListener('click', function reveal() {
-                    if (this.attributes.value == '-1') {
-                        console.log('💣')
+                boxes[box].onclick = function reveal(e) {
+
+                    if (this.dataset.number == -1) {
+                        document.getElementById('selectedGame').remove()
+                        // this.textContent = '💣'
+
+                        // var removeBox = document.getElementById('selectedGame').getElementsByClassName('box')
+
+                        // for (var i = 0; i < removeBox.length; i++) {
+
+                        //     removeBox[i].parentNode.removeChild(removeBox[i])
+                        // }
+                        clearInterval(timeout)
+                        score = 60 - time
+                        timer.innerText = 'GameOver \n' + 'Score :' + score
+                    }
+
+                    else if (this.dataset.number == '4') {
+                        this.textContent = '🚩'
                     }
                     else {
-                        console.log(this.attributes.value)
+                        this.textContent = this.dataset.number
                     }
-                })
+
+                }
             }
         })
+
 
         .catch(err => console.error(err));
 }
