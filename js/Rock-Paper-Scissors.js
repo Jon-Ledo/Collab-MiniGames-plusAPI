@@ -41,14 +41,14 @@ const game = () =>{
            }else if(showIcon.className === randomClasses[0] && computerShowIcon.className === randomClasses[1]){
                cScore.innerHTML = pcScore;
                pcScore++;
-               text.innerHTML = "You Loosed ! ";
+               text.innerHTML = "You Lose ! ";
                text.style.color = 'red';
                text2.innerHTML = text.innerHTML;
                text2.style.color = 'red';
            }else if(showIcon.className === randomClasses[1] && computerShowIcon.className === randomClasses[2]){
                cScore.innerHTML = pcScore;
                pcScore++;
-               text.innerHTML = "You Loosed ! ";
+               text.innerHTML = "You Lose ! ";
                text.style.color = 'red';
                text2.innerHTML = text.innerHTML;
                text2.style.color = 'red';
@@ -62,7 +62,7 @@ const game = () =>{
            }else if(showIcon.className === randomClasses[2] && computerShowIcon.className === randomClasses[0]){
                cScore.innerHTML = pcScore;
                pcScore++;
-               text.innerHTML = "You Loosed ! ";
+               text.innerHTML = "You Lose ! ";
                text.style.color = 'red';
                text2.innerHTML = text.innerHTML;
                text2.style.color = 'red';
