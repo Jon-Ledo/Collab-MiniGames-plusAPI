@@ -16,14 +16,27 @@
     font-size: 25px;
     align-items: center;
 }
-.Tabs li{
+
+.Tabs button:hover{
+    font-size: larger;
+    background-color: aqua;
+}
+button{
     margin: 5px;
     padding: 15px;
     border: 4px solid red;
     border-radius: 1px .5px;
-    background-color: aliceblue;
+    background-color: aliceblue; 
+    font-size: 25px;
 }
-.Tabs li:hover{
-    font-size: larger;
-    background-color: aqua;
+.leadercards{
+    margin: 5px;
+    padding: 15px;
+    border: 4px solid red;
+    border-radius: 1px .5px;
+    background-color: aliceblue; 
+    font-size: 25px;
+}
+.hidden{
+    display: none
 }
