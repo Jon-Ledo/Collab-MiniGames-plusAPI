@@ -13,6 +13,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/spotify.css">
   </head>
 
   <body>
@@ -22,10 +23,22 @@
         <header class="col-12">
           <h1 class="fs-1">JavaScript Mini Games</h1>
 
-          <div class="music-player" id="player">
-            <p class="fs-3">Play music here from Spotify</p>
-            <!-- CODE FOR SPOTIFY -->
+          <!-- Spotify Search Content -->
+        <div class="search" id="search-card">
+          <p>Top 10 Spotify Tracks</p>
+          <p>Search for song names, artists or albums</p>
+        <input type="search" id="spotify-search">
+        <input type="submit" id="search-btn">
+        </div>
+        <!-- Spotify Modal showing data from API -->
+        <div class="modal-background hidden" id="modal">
+          <div class="modal-card" id="modal-content">
+            <span class="modal-close">&times;</span>
+            <!-- new elements added here -->
           </div>
+        </div>
+        <br/>
+
         </header>
       </section>
 
@@ -124,6 +137,9 @@
       >
         GamePlayer here(hidden by default)
       </div> -->
-    <script src="./Assets/script.js"></script>
+
+    </div>
+    <script src="./js/spotifyAPI.js"></script>
+
   </body>
 </html>
