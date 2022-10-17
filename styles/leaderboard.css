@@ -16,7 +16,6 @@
     font-size: 25px;
     align-items: center;
 }
-
 .Tabs button:hover{
     font-size: larger;
     background-color: aqua;
@@ -29,14 +28,12 @@ button{
     background-color: aliceblue; 
     font-size: 25px;
 }
-.leadercards{
-    margin: 5px;
+.whacHS{
+    list-style-type: none;
+    margin: 0px;
     padding: 15px;
     border: 4px solid red;
     border-radius: 1px .5px;
     background-color: aliceblue; 
     font-size: 25px;
-}
-.hidden{
-    display: none
 }

@@ -1,8 +1,8 @@
 
 
 let pcScore = 1;
-let urScore = 1;
-const yourScore = document.getElementById('urScore');
+let rpsScore = 1;
+const yourScore = document.getElementById('rpsScore');
 const cScore = document.getElementById('pcScore');
 const buttons = document.querySelectorAll('.selection button');
 const showIcon = document.querySelector('.show i');
@@ -32,8 +32,8 @@ const game = () =>{
            } 
      
            else if(showIcon.className === randomClasses[0] && computerShowIcon.className === randomClasses[2]){
-               yourScore.innerHTML = urScore;
-               urScore++;
+               yourScore.innerHTML = rpsScore;
+               rpsScore++;
                text.innerHTML = "It's a Win ! ";
                text.style.color = 'rgb(1, 146, 1)';
                text2.innerHTML = text.innerHTML;
@@ -53,8 +53,8 @@ const game = () =>{
                text2.innerHTML = text.innerHTML;
                text2.style.color = 'red';
            }else if(showIcon.className === randomClasses[1] && computerShowIcon.className === randomClasses[0]){
-               yourScore.innerHTML = urScore;
-               urScore++;
+               yourScore.innerHTML = rpsScore;
+               rpsScore++;
                text.innerHTML = "It's a Win ! ";
                text.style.color = 'rgb(1, 146, 1)';
                text2.innerHTML = text.innerHTML;
@@ -67,7 +67,7 @@ const game = () =>{
                text2.innerHTML = text.innerHTML;
                text2.style.color = 'red';
            }else if(showIcon.className === randomClasses[2] && computerShowIcon.className === randomClasses[1]){
-               yourScore.innerHTML = urScore;
+               yourScore.innerHTML = rpsScore;
                urScore++;
                text.innerHTML = "It's a Win ! ";
                text.style.color = 'rgb(1, 146, 1)';
@@ -84,6 +84,8 @@ var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
     document.getElementById("timer").innerHTML = "Finished";
+    localStorage.setItem("rpshighScore",rpsScore);
+    return window.location.assign('../End screen/Endgame.html')
   } else {
     document.getElementById("timer").innerHTML = timeleft + " seconds remaining";
   }
