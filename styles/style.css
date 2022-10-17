@@ -20,6 +20,46 @@ body {
   min-height: 130px;
 }
 
+/* ENDGAME Screen */
+.endContainer{
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+}
+input{
+  padding: 15px;
+  margin: 5px;
+  transition: width 1s, height 1s;
+  transition-timing-function: linear;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+input::placeholder{
+  font-size: 20px;
+}
+input:focus{
+  padding: 20px;
+  margin:8px
+}
+input:focus::placeholder{
+  font-size: 25px;
+}
+
+.btn{
+  background-color: white;
+  color:#52adf3;
+  font-size: 25px;
+  border: 1px solid black;
+  padding: 3px;
+  margin: 2px;
+  border-radius: 10px;
+}
+.scoreSubmission{
+  padding-bottom: 15px;
+}
+
 /* #game1 {
   background-color: brown;
 }
