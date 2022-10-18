@@ -64,6 +64,8 @@ function minesweeper() {
                         score = 60 - time
                         timer.textContent = 'GameOver \n' + 'Score :' + score
                         document.getElementById('selectedGame').textContent = '\t'
+                        var home = document.getElementById('home')
+                        home.style.display = 'block'
                     }
 
 
