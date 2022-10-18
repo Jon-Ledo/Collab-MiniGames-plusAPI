@@ -1,115 +1,65 @@
-# team-5
+# JavaScript Mini Games (with API)
 
-## Project Requirements
+## Links
 
-You and your group will use everything you’ve learned over the past six modules to create a real-world front-end application that you’ll be able to showcase to potential employers. The user story and acceptance criteria will depend on the project that you create, but your project must fulfil the following requirements:
+- Live Site URL: [live site](https://jon-ledo.github.io/Collab-MiniGames-plusAPI/)
+- Repo: [repo](https://github.com/Jon-Ledo/Collab-MiniGames-plusAPI)
+- [link to Spotify API via rapidAPI](https://rapidapi.com/Glavier/api/spotify23/)
+- [link to Minesweeper API via rapidAPI](https://rapidapi.com/anpham.aph/api/minesweeper1/)
 
-- Use a CSS framework.
+## Preview
 
-- Be deployed to GitHub Pages.
+![main page that greets visitors to site](./Assets/images/minigames-page.JPG)
 
-- Be interactive (i.e., accept and respond to user input).
+## Tech Used
 
-- Use at least one [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources).
+- HTML
+- CSS
+- Bootstrap
+- JavaScript
+- 3rd party API's
 
-- Does not use alerts, confirms, or prompts (use modals).
+## Collaborators
 
-- Use client-side storage to store persistent data.
+- [Kevin Deck](https://github.com/jungdeck)
+- [Dustin Lee](https://github.com/DustinLee0)
+- [Jon Ledo](https://github.com/Jon-Ledo)
+- [Nebiat HMichael Nana](https://github.com/NebiatHNana)
+- [Ekamjot Sidhu](https://github.com/EkamjotSidhu)
 
-- Be responsive.
+## Description
 
-- Have a polished UI.
+A collaborative effort to create a site that features in-browser games made using JavaScript and API’s. Anyone can visit the site and play any of the games listed, and have their final scores saved. Scores are saved to localStorage and can be viewed by clicking the Leaderboards button on the main page. This app runs in the browser and feature dynamically updating HTML and CSS.
 
-- Have a clean repository that meets quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+The HTML uses classes from Bootstrap to help with styling, but most importantly creates easily responsive components. As a result, there are fewer media queries needed which really helped speed up development.
 
-- Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
+User can click on any of the large game buttons and be redirected to a new page where the game and countdown begins.
 
-## Presentation Requirements
+A Music component also exists to allow the playing of an mp3 file. Initially meant to link up to the Spotify API and play sounds from there, but will need to become a future feature. Instead, a user can input the name of an artist and Spotify is queried to view the top 10 tracks from that artist, all viewable within a modal.
 
-Use this [project presentation template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing) to address the following:
+## Games side
 
-- Elevator pitch: a one minute description of your application
+Page currently features three games; Rock Paper Scissors, Whack-a-Mole, and Minesweeper.
 
-- Concept: What is your user story? What was your motivation for development?
+### Rock Paper Scissors
 
-- Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
+![rock-paper-scissors game](./Assets/images/rps-game.png)
+The classic game, is the front runner of this web page. Simply click your choice and see if you win against the computer. Rock > Scissors > Paper > Rock... Rack up as many points as possible before time runs out.
 
-- Demo: Show your stuff!
+### Whack a Mole
 
-- Directions for Future Development
+![whack a mole game](./Assets/images/mole-game.png)
+Everyone's favourite carnival game, right here for you to play. Click (or whack) the mole image that appears on screen and accumulate your points. You have 20sec to get your high score.
 
-- Links to the deployed application and the GitHub repository
+### Minesweeper
 
-## Grading Requirements
+![minesweeper game](./Assets/images/minesweeper-page.JPG)
+A classic puzzle game from the past, re-created here. An API is used to create a 10x10 grid with predetermined lines containing numbers pertaining to the location of the mines. User clicks on a square to reveal what's underneath. Keep going until time runs out, or you hit a mine.
 
-This project is graded based on the following criteria:
+## Music/Spotify side
 
-### Technical Acceptance Criteria: 25%
+![music player](./Assets/images/audio-player.JPG)
+A simple audio player is featured to allow the user to play some video game music while they play their mini games. The player has buttons to start, pause and stop the audio file from playing.
 
-- Satisfies the following code requirements:
-
-  - Application uses at least two [server-side APIs](https://coding-boot-camp.github.io/full-stack/apis/api-resources)
-
-  - Application uses client-side storage to store persistent data.
-
-  - Application doesn't use JS alerts, prompts, or confirms (uses modals instead).
-
-  - Application uses a CSS framework other than Bootstrap.
-
-  - Application is interactive (accepts and responds to user input)
-
-### Concept 10%
-
-- Application should be a unique and novel idea.
-
-- Your group should clearly and concisely articulate your project idea.
-
-### Deployment: 20%
-
-- Application deployed at live URL and loads with no errors.
-
-- Application GitHub URL submitted.
-
-### Repository Quality: 10%
-
-- Repository has a unique name.
-
-- Repository follows best practices for file structure and naming conventions.
-
-- Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-- Repository contains multiple descriptive commit messages.
-
-- Repository contains a quality README file with description, screenshot, and link to deployed application.
-
-### Application Quality: 15%
-
-- Application user experience is intuitive and easy to navigate.
-
-- Application user interface style is clean and polished.
-
-- Application is responsive.
-
-### Presentation 10%
-
-- Your group should present using a slide deck.
-
-- Every group member should speak during the presentation.
-
-- Your presentation should follow the [Project Presentation Template](https://docs.google.com/presentation/d/10QaO9KH8HtUXj__81ve0SZcpO5DbMbqqQr4iPpbwKks/edit?usp=sharing).
-
-### Collaboration 10%
-
-- There are no major disparities in the number of GitHub contributions between group members.
-
-## How to Submit Your Interactive Front-End Project
-
-**Each member of your group** is required to submit the following for review:
-
-- The URL of the deployed application.
-
-- The URL of the GitHub repository, with a unique name and a README describing the project.
-
----
-
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+![spotify modal](./Assets/images/music-modal.JPG)
+After a user inputs an artist name and hits the submit button, Spotify API is queried and generates the top 10 tracks relating to the specified artist. In the example above, "Kanye" was the string entered and it listed the top 10 tracks relating to him.
