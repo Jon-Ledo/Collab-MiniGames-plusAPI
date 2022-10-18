@@ -1,6 +1,8 @@
-var game2 = document.getElementById('game2')
-game2.addEventListener('click', minesweeper)
 function minesweeper() {
+    // document.getElementById('selectedGame').innerHTML = ""
+    // if (document.getElementById('timer').innerText != "") {
+    //     document.getElementById('timer').innerText = ""
+    // }
     const options = {
         method: 'GET',
         headers: {
@@ -20,7 +22,7 @@ function minesweeper() {
                     createDiv = document.createElement('div')
                     createDiv.setAttribute('class', 'box')
                     createDiv.setAttribute('data-number', response.board[row][column])
-                    createDiv.innerText = ' '
+                    createDiv.innerText = '\n'
                     game.appendChild(createDiv)
                 }
             }
@@ -44,25 +46,29 @@ function minesweeper() {
 
             for (var box = 0; box < boxes.length; box++) {
                 boxes[box].onclick = function reveal(e) {
+                    this.ri
 
                     if (this.dataset.number == -1) {
-                        document.getElementById('selectedGame').remove()
+                        // document.getElementById('selectedGame').remove()
                         // this.textContent = '💣'
 
-                        // var removeBox = document.getElementById('selectedGame').getElementsByClassName('box')
-
-                        // for (var i = 0; i < removeBox.length; i++) {
+                        var removeBox = document.getElementById('selectedGame').getElementsByClassName('box')
+                        while (removeBox[0]) {
+                            removeBox[0].classList.remove('box')
+                        }
+                        // for (var i = 0; i <= removeBox.length; i++) {
 
                         //     removeBox[i].parentNode.removeChild(removeBox[i])
                         // }
                         clearInterval(timeout)
                         score = 60 - time
-                        timer.innerText = 'GameOver \n' + 'Score :' + score
+                        timer.textContent = 'GameOver \n' + 'Score :' + score
+                        document.getElementById('selectedGame').textContent = '\t'
+                        var home = document.getElementById('home')
+                        home.style.display = 'block'
                     }
 
-                    else if (this.dataset.number == '4') {
-                        this.textContent = '🚩'
-                    }
+
                     else {
                         this.textContent = this.dataset.number
                     }
@@ -74,3 +80,4 @@ function minesweeper() {
 
         .catch(err => console.error(err));
 }
+minesweeper()
