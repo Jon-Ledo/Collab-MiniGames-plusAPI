@@ -21,23 +21,23 @@
       <section class="row">
         <!-- HEADER -->
         <header class="col-12">
-          <h1 class="fs-1">JavaScript Mini Games</h1>
+          <h1 class="fs-1 m-4 fw-bold">JavaScript Mini Games</h1>
 
           <!-- Spotify Search Content -->
-        <div class="search" id="search-card">
-          <p>Top 10 Spotify Tracks</p>
-          <p>Search for song names, artists or albums</p>
-        <input type="search" id="spotify-search">
-        <input type="submit" id="search-btn">
-        </div>
-        <!-- Spotify Modal showing data from API -->
-        <div class="modal-background hidden" id="modal">
-          <div class="modal-card" id="modal-content">
-            <span class="modal-close">&times;</span>
-            <!-- new elements added here -->
+          <div class="search mb-4 col-12 col-md-8" id="search-card">
+            <h2>Top 10 Spotify Tracks</h2>
+            <p>Search for song names, artists or albums</p>
+            <input type="search" id="spotify-search">
+            <input type="submit" id="search-btn">
           </div>
-        </div>
-        <br/>
+
+          <!-- Spotify Modal showing data from API -->
+          <div class="modal-background hidden" id="modal">
+            <div class="modal-card" id="modal-content">
+              <span class="modal-close">&times;</span>
+              <!-- new elements added here -->
+            </div>
+          </div>
 
         </header>
       </section>
@@ -45,57 +45,33 @@
       <!-- GAMES SECTION -->
       <section class="row justify-content-space">
         <!-- GAME 1 -->
-        <article class="col-md-6">
-          <div class="card">
+        <article class="col-md-4">
+          <div class="card bg-img-1">
             <a href="./RPS-GAME.html">
               <div class="card-body">
-                <h2 class="card-title">Rock-Paper-Scissors</h2>
-                <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
+                <h2 class="card-title fs-5">Rock-Paper-Scissors</h2>
               </div>
             </a>
           </div>
         </article>
 
         <!-- GAME 2 -->
-        <div class="col-md-6">
-          <article class="card">
+        <div class="col-md-4">
+          <article class="card bg-img-2">
             <a href="./games/whac-a-mole.html">
               <div class="card-body">
-                <h2 class="card-title">Whack-A-Mole</h2>
-                <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
+                <h2 class="card-title fs-5">Whack-A-Mole</h2>
               </div>
             </a>
           </article>
         </div>
 
         <!-- GAME 3 -->
-        <div class="col-md-6">
-          <article class="card">
+        <div class="col-md-4">
+          <article class="card bg-img-3">
             <a href="./minesweeper.html">
               <div class="card-body">
-                <h2 class="card-title">Minesweeper</h2>
-                <p class="card-text">
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </p>
-              </div>
-            </a>
-          </article>
-        </div>
-
-        <!-- GAME 4 -->
-        <div class="col-md-6">
-          <article class="card">
-            <a href="#">
-              <div class="card-body">
-                <h2 class="card-title">Coming Soon...</h2>
-                <p class="card-text"></p>
+                <h2 class="card-title fs-5">Minesweeper</h2>
               </div>
             </a>
           </article>
@@ -110,34 +86,6 @@
         
       </div>
     </div>
-
-    <!-- <div>
-    <a href="./whac-a-mole.html">
-      <div class="gameContainer" id="game1">Game 1</div>
-    </a>
-    <div class="gameContainer" id="game2">Game 2</div>
-    <div class="gameContainer" id="game3">Game 3</div>
-    <div class="gameContainer" id="game4">Game 4</div>
-  </div> -->
-
-    <!-- MINESWEEPER RELATED TIMER -->
-    <!-- <div id="timer" style="height:50px ;width:100px; background-color:white;color:black"></div>
-  <div class="selectedGame" id="selectedGame" style="border:0;width: 1000px; height: 1000px;"> -->
-
-    <!-- <div
-        class="selectedGame"
-        id="selectedGame"
-        style="
-          width: 600px;
-          height: 600px;
-          background-color: yellow;
-          border-radius: 20px;
-          color: black;
-        "
-      >
-        GamePlayer here(hidden by default)
-      </div> -->
-
     </div>
     <script src="./js/spotifyAPI.js"></script>
 
