@@ -60,7 +60,7 @@ function countDown() {
 
     showModal()
 
-    localStorage.setItem('highScore', hitConfirmed)
+    localStorage.setItem('whachighScore', hitConfirmed)
 
     setTimeout(() => {
       return window.location.assign('../End screen/Endgame.html')
