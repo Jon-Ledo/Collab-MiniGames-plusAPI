@@ -11,6 +11,9 @@ body {
   color: white;
   text-align: center;
 }
+.fs-1{
+  font-family: 'Silkscreen', cursive;
+}
 
 /* Game Cards */
 .card {
@@ -107,4 +110,12 @@ a {
   list-style: none;
   margin: 10px;
   padding: 10px;
+}
+/* Leaderboard button */
+#leaderboards{
+  font-size: 30px;
+}
+#leaderboards:hover{
+  font-size: 45px; 
+  background-color: yellowgreen;
 }
