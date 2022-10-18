@@ -11,6 +11,9 @@ body {
   color: white;
   text-align: center;
 }
+.fs-1{
+  font-family: 'Silkscreen', cursive;
+}
 
 .card {
   margin-bottom: 20px;
