@@ -12,8 +12,8 @@ function whacLeaderboards(){
  }).join("");
 }
 
-function rpsLeaderboards(){
-    rpsHSList.innerHTML= rpsHS.map(scores =>{
-        return`<li class = "rpsHS">${scores.name}-${scores.scores}</li>`;
- }).join("");
-    }
+// function rpsLeaderboards(){
+//     rpsHSList.innerHTML= rpsHS.map(scores =>{
+//         return`<li class = "rpsHS">${scores.name}-${scores.scores}</li>`;
+//  }).join("");
+//     }

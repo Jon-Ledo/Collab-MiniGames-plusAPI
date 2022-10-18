@@ -1,11 +1,9 @@
 var username = document.getElementById("username");
 var saveScoreBtn = document.getElementById("saveScoreBtn");
 var finalScore = document.getElementById("finalScore");
-var whachighScore = localStorage.getItem("whachighScore");
-var rpshighScore = localStorage.getItem("rpshighScore");
+var highScore = localStorage.getItem("whachighScore");
 var leaderboards = JSON.parse(localStorage.getItem('leaderboards')) || [];
 var repeatBtn = document.getElementById('repeatBtn')
-var highScore = [whachighScore, rpshighScore];
 finalScore.innerText = highScore;
 
 username.addEventListener('keyup', () => {
@@ -25,7 +23,7 @@ username.addEventListener('keyup', () => {
 
         leaderboards.splice(30);
     
-        localStorage.setItem('whacleaderboards', JSON.stringify(leaderboards)) 
+        localStorage.setItem('leaderboards', JSON.stringify(leaderboards)) 
         return window.location.assign('../index.html')
 }
 

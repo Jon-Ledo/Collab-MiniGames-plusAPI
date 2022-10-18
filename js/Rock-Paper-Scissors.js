@@ -84,7 +84,7 @@ var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
     document.getElementById("timer").innerHTML = "Finished";
-    localStorage.setItem("rpshighScore",rpsScore);
+    localStorage.setItem("whachighScore",rpsScore);
     return window.location.assign('../End screen/Endgame.html')
   } else {
     document.getElementById("timer").innerHTML = timeleft + " seconds remaining";

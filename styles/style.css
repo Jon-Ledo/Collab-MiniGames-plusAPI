@@ -101,3 +101,11 @@ a {
   margin: 10px;
   padding: 10px;
 }
+/* Leaderboard button */
+#leaderboards{
+  font-size: 30px;
+}
+#leaderboards:hover{
+  font-size: 45px; 
+  background-color: yellowgreen;
+}
