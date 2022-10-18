@@ -105,3 +105,21 @@ function clickOutside(e) {
         modalBG.classList.add('hidden')
         clearModal()
 }}
+
+// MUSIC PLAYER JS
+var playMusic = false
+let music = new Audio("./Assets/music/parasail-zelda.mp3")
+
+function play() {
+        music.play()
+}
+
+function pause() {
+    music.pause()
+    console.log(music.currentTime)
+}
+
+function stop() {
+    music.load()
+    music.currentTime = 0
+}
