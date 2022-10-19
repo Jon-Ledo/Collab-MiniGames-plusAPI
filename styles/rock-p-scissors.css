@@ -89,3 +89,13 @@ h2{
     background-color: red;
 }
 
+/* music player */
+.player {
+    padding: 5px;
+    background-color: #808080;
+  }
+  
+  .player button {
+    width: 34px;
+    margin: 0 3px;
+  }
