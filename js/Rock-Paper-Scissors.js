@@ -1,5 +1,5 @@
 
-
+//Declaring the variables and scores 
 let pcScore = 1;
 let rpsScore = 1;
 const yourScore = document.getElementById('rpsScore');
@@ -12,7 +12,7 @@ const randomClasses = ["game hand-rock", "game hand-paper","game hand-scissors"]
 const text = document.getElementById('demo');
 const text2 = document.getElementById('demo2');
 
-
+//Functionality with else if condition to the score 
 const game = () =>{
     buttons.forEach(btn =>{
         btn.addEventListener('click',(e)=>{
@@ -78,7 +78,7 @@ const game = () =>{
     });
 }
 game();
-
+//Time countdown
 var timeleft = 15;
 var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
