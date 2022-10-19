@@ -1,15 +1,8 @@
-// const nameEl = document.querySelector('#song-name')
-// const albumEl = document.querySelector('#song-album')
-// const timeEl = document.querySelector('#song-length')
-// const albumPicture = document.querySelector('#cover-img')
-
-
 var inputEl = document.querySelector('#spotify-search')
 var searchBtn = document.querySelector('#search-btn')
 var modalBG = document.querySelector('#modal')
 var modalClose = document.querySelector('.modal-close')
 var spotifyCard = document.querySelector('#modal-content')
-
 
 const options = {
 	method: 'GET',
@@ -31,15 +24,12 @@ searchBtn.addEventListener('click', function() {
         return response.json()
     })
     .then(function (response) {
-        // var iterate = response.tracks
         var newH3 = document.createElement('h3')
         newH3.innerHTML = input + "\'s top 10 tracks"
         spotifyCard.append(newH3)
-        // iterate.forEach(() => {
             for(i = 0; i < response.tracks.length; i++){
             getData(response.tracks[i], i)
-            }
-        // })                      
+            }                  
      })
     .catch(function (err) {
          console.error(err)
