@@ -107,7 +107,6 @@ function clickOutside(e) {
 }}
 
 // MUSIC PLAYER JS
-var playMusic = false
 let music = new Audio("./Assets/music/parasail-zelda.mp3")
 
 function play() {

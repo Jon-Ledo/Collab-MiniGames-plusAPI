@@ -90,3 +90,15 @@ a {
     height: 100px;
   }
 }
+
+/* music player */
+.player {
+  padding: 5px;
+  background-color: #808080;
+  width: fit-content;
+}
+
+.player button {
+  width: 34px;
+  margin: 0 3px;
+}
