@@ -44,7 +44,7 @@ Page currently features three games; Rock Paper Scissors, Whack-a-Mole, and Mine
 
 ### Rock Paper Scissors
 
-![rock-paper-scissors game](./Assets/images/rps-game.png)
+![![Screen Shot 2022-10-19 at 5 03 19 PM](https://user-images.githubusercontent.com/104470467/196804007-a9aa6206-2ea4-4a43-a870-bc7f0184cd91.png))
 The classic game, is the front runner of this web page. Simply click your choice and see if you win against the computer. Rock > Scissors > Paper > Rock... Rack up as many points as possible before time runs out.
 
 ### Whack a Mole
