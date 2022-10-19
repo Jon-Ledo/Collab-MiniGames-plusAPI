@@ -18,6 +18,7 @@
 - Bootstrap
 - JavaScript
 - 3rd party API's
+    -Spotify API URL: https://rapidapi.com/airaudoeduardo/api/spotify81/
 
 ## Collaborators
 
@@ -62,4 +63,6 @@ A classic puzzle game from the past, re-created here. An API is used to create a
 A simple audio player is featured to allow the user to play some video game music while they play their mini games. The player has buttons to start, pause and stop the audio file from playing.
 
 ![spotify modal](./Assets/images/music-modal.JPG)
-After a user inputs an artist name and hits the submit button, Spotify API is queried and generates the top 10 tracks relating to the specified artist. In the example above, "Kanye" was the string entered and it listed the top 10 tracks relating to him.
+After a user inputs an artist name, song name or album name and hits the submit button, Spotify API is queried and generates the top 10 tracks relating to the specified artist. In the example above, "Kanye" was the string entered and it listed the top 10 tracks relating to him.
+
+This API is using Spotify's Search endpoint with the parameters: search input, offset = 0, limit search = 10, number of top results = 10. 
