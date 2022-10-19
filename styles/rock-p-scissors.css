@@ -3,34 +3,45 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+        display: flex;
+        justify-content: center;
+        background-image: url(../Assets/images/close-up-rock-paper-scissors-hands-isolated-white-background-151750538.jpeg);
+        opacity: 0.7;
+      }
+
 body{
-    min-height: 100vh;
+    min-height: 1000vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(48, 43, 43);
+    background-color: #e9d8c1
 }
 h1{
     font-family: sans-serif;
-    font-weight: 1000;
+    font-weight: 10000;
     margin: 15px 0;
 }
 .container{
     display: flex;
 }
 .container .segment{
-    width: 250px;
-    margin: 30px 70px;
+    width: fit-content;
+    height: fit-content;
+    margin: 30px 100px;
 }
 .segment .data{
-    background: green;
+    background: rgb(18, 101, 136);
+    border-radius: 20%;
+    border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 50px;
+    height: 100px;
 }
 .data span , .data h3{
-    font-size: 25px;
+    font-size: 30px;
     font-weight: bold;
     margin: 0px 10px;
     font-family: sans-serif;
@@ -71,15 +82,15 @@ h2{
     color: yellow;
 }
 #timer {
-    margin: 0 20px;
+    margin: 0 40px;
     padding: 30px;
-    border-radius: 50%;
+    border-radius: 150%;
     border: none;
     outline: none;
     cursor: pointer;
-    background : black;
+    background : rgb(18, 101, 136);
     font-size: 20px;
-    color: yellow;
+    color: rgb(224, 222, 222);
 }
 
 .game:hover {
@@ -89,3 +100,10 @@ h2{
     background-color: red;
 }
 
+/* MEDIA QUERIES */
+@media (min-width: 768px) and (max-width: 991px) {
+    .bg-img-1 a div h2 {
+      font-size: 19px !important;
+    }
+  }
+  
