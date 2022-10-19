@@ -101,12 +101,21 @@ h2{
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 768px) and (max-width: 991px) {
-    .bg-img-1 a div h2 {
-      font-size: 19px !important;
+@media (max-width: 800px) {
+    .container boddy {
+      width: 360px;
+      height: 400px;
     }
-  }
   
+    .segment h1 {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .data i {
+      width: 100px;
+      height: 100px;
+    }
 /* music player */
 .player {
     padding: 5px;
