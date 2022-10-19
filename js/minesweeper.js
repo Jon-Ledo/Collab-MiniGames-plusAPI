@@ -1,72 +1,100 @@
-// Variables
-const minefield = document.querySelector('.board')
+function minesweeper() {
+    // document.getElementById('selectedGame').innerHTML = ""
+    // if (document.getElementById('timer').innerText != "") {
+    //     document.getElementById('timer').innerText = ""
+    // }
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'e0f23252c6msh20f31f98818a1f3p1ca85bjsnd09303c40ea0',
+            'X-RapidAPI-Host': 'minesweeper1.p.rapidapi.com'
+        }
+    };
 
-// ****************
-// API and FETCH **
-// ****************
-const options = {
-  method: 'GET',
-  headers: {
-    'X-RapidAPI-Key': 'ab28c4b632mshc8742727159b347p19c425jsn30615a86f040',
-    'X-RapidAPI-Host': 'minesweeper1.p.rapidapi.com',
-  },
+    fetch('https://minesweeper1.p.rapidapi.com/boards/new?r=10&c=10&bombs=10', options)
+        .then(response => response.json())
+
+        .then(response => {
+            var game = document.getElementById('selectedGame')
+
+            for (row = 0; row <= 9; row++) {
+                for (column = 0; column <= 9; column++) {
+                    createDiv = document.createElement('div')
+                    createDiv.setAttribute('class', 'box')
+                    createDiv.setAttribute('data-number', response.board[row][column])
+                    createDiv.innerText = '\n'
+                    game.appendChild(createDiv)
+                }
+            }
+
+        })
+        .then(response => {
+            var score = 0
+            var time = 60
+            var timer = document.getElementById('timer')
+            var timeout = setInterval(function countdown() {
+                timer.innerText = 'Time: ' + time;
+
+                time--
+                if (time <= 0) {
+                    timer.textContent = 'Time over ';
+                    clearInterval(timeout)
+                }
+            }, 1000)
+
+            const boxes = document.querySelectorAll('.box')
+
+            for (var box = 0; box < boxes.length; box++) {
+                boxes[box].onclick = function reveal(e) {
+                    this.ri
+
+                    if (this.dataset.number == -1) {
+                        // document.getElementById('selectedGame').remove()
+                        // this.textContent = '💣'
+
+                        var removeBox = document.getElementById('selectedGame').getElementsByClassName('box')
+                        while (removeBox[0]) {
+                            removeBox[0].classList.remove('box')
+                        }
+                        // for (var i = 0; i <= removeBox.length; i++) {
+
+                        //     removeBox[i].parentNode.removeChild(removeBox[i])
+                        // }
+                        clearInterval(timeout)
+                        score = 60 - time
+                        timer.textContent = 'GameOver \n' + 'Score :' + score
+                        document.getElementById('selectedGame').textContent = '\t'
+                        var home = document.getElementById('home')
+                        home.style.display = 'block'
+                    }
+
+
+                    else {
+                        this.textContent = this.dataset.number
+                    }
+
+                }
+            }
+        })
+
+
+        .catch(err => console.error(err));
+}
+minesweeper()
+
+// MUSIC PLAYER JS
+let music = new Audio("./Assets/music/parasail-zelda.mp3")
+
+function play() {
+        music.play()
 }
 
-fetch(
-  // Parameters
-  // r > # of rows
-  // c > # of columns
-  // bombs > # of bombs
-  'https://minesweeper1.p.rapidapi.com/boards/new?r=10&c=10&bombs=10',
-  options
-)
-  .then((response) => response.json())
-  .then((response) => {
-    // Build board based on response
-    // default board size 10x10 with 10 mines
-    createBoard(response)
-  })
-  .catch((err) => console.error(err))
-
-// FUNCTIONS
-function createBoard(data) {
-  const board = data.board
-
-  board.forEach((boardLine, index) => {
-    // const lineNumber = index + '0'
-
-    boardLine.forEach((square) => {
-      const createdDiv = document.createElement('div')
-      createdDiv.classList.add('square')
-      if (square > 0) {
-        createdDiv.textContent = square
-      } else if (square < 0) {
-        createdDiv.textContent = '💣'
-      }
-
-      // determine colour of number in square
-      if (createdDiv.textContent === '1') {
-        createdDiv.classList.add('blue')
-      } else if (createdDiv.textContent === '2') {
-        createdDiv.classList.add('green')
-      } else if (createdDiv.textContent === '3') {
-        createdDiv.classList.add('red')
-      }
-
-      // createdDiv.classList.add('hide')
-      minefield.append(createdDiv)
-
-      createdDiv.addEventListener('mousedown', (e) => {
-        rightClick(e)
-      })
-    })
-  })
+function pause() {
+    music.pause()
+    console.log(music.currentTime)
 }
 
-// testing right click events to disarm the mines for game func
-function rightClick(e) {
-  if (e.which === 3) {
-    console.log('right clicked')
-    console.log(e)
-  }
+function stop() {
+    music.load()
+    music.currentTime = 0
 }
